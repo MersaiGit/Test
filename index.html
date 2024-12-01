@@ -1,28 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-  <title>Mersai</title>
-  <style>
-    body {
-      background-color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      font-family: Arial, sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мерсай - Очаровательный Британский Короткошерстный</title>
+    <style>
+        /* Современные анимации и эффекты */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
 
-    .frame {
-      border: 2px solid black;
-      padding: 20px;
-      text-align: center;
-      font-size: 2em;
-    }
-  </style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #2c3e50;
+        }
+
+        .header {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+        }
+
+        .cat-profile {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .cat-image {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 15px;
+            margin: 1rem auto;
+            display: block;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Интерактивные элементы */
+        .interactive-button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .interactive-button:hover {
+            background: #2980b9;
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
-  <div class="frame">
-    <p>Сайт в разработке</p>
-  </div>
+    <div class="header">
+        <h1>Мерсай</h1>
+        <p>Великолепный Британский Короткошерстный Кот</p>
+    </div>
+
+    <div class="cat-profile">
+        <img src="mersai-cat.jpg" alt="Мерсай" class="cat-image">
+        
+        <h2>О Мерсае</h2>
+        <p>Мерсай - очаровательный британский короткошерстный кот с серебристо-голубой шерстью и выразительными янтарными глазами. Этот благородный джентльмен известен своим спокойным характером и королевской грацией.</p>
+
+        <div class="features">
+            <div class="feature-card">
+                <h3>Характер</h3>
+                <p>Спокойный и уравновешенный, любит уютные места и теплые объятия</p>
+            </div>
+            <div class="feature-card">
+                <h3>Увлечения</h3>
+                <p>Наблюдение за птицами, сон на солнечных подоконниках, игры с интерактивными игрушками</p>
+            </div>
+            <div class="feature-card">
+                <h3>Любимые занятия</h3>
+                <p>Позирование для фотографий, дегустация премиальных кормов, уроки кошачьей йоги</p>
+            </div>
+        </div>
+
+        <button class="interactive-button" onclick="alert('Мяу! Спасибо за внимание к моей персоне!')">
+            Погладить Мерсая
+        </button>
+    </div>
 </body>
 </html>
